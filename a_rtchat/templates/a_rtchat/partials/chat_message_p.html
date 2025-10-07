@@ -1,22 +1,24 @@
-<div class="fade-in-up">{% include "a_rtchat/chat_message.html" %}</div>
+<div id="chat_messages" hx-swap-oob="beforeend">
+  <div class="fade-in-up">{% include "a_rtchat/chat_message.html" %}</div>
 
-<style>
-  .fade-in-up {
-    animation: fadeInAndUp 0.6s ease;
-  }
-
-  @keyframes fadeInAndUp {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
+  <style>
+    .fade-in-up {
+      animation: fadeInAndUp 0.6s ease;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
 
-<script>
-  scrollToBottom();
-</script>
+    @keyframes fadeInAndUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <script>
+    scrollToBottom();
+  </script>
+</div>
